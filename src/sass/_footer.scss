@@ -73,11 +73,11 @@
     text-decoration: none;
 }
 
-.subscribe__form {
+.subscription__form {
     margin-bottom: 20px;
 }
 
-.subscribe__label {
+.subscription__label {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -86,7 +86,7 @@
 
 }
 
-.subscribe__input {
+.subscription__input {
     display: block;
     width: 100%;
 
@@ -99,14 +99,14 @@
     margin: 12px 0 0 0;
 }
 
-.subscribe__input::placeholder {
+.subscription__input::placeholder {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     line-height: 150%;
     color: #505050;
 }
 
-.subscribe__btn {
+.subscription__btn {
     display: block;
     padding: 11px 22px;
     margin: 0 0 20px auto;

@@ -19,14 +19,17 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique.
     </h3>
-
-    <label>
+    <div class="subscribe__container">
       <input
+        id="email"
         class="subscribe__input"
-        type="text"
+        type="email"
+        name="email"
+        required
         placeholder="Enter your email"
       />
-    </label>
-    <button class="subscribe__button" type="button">Subscribe</button>
+      <label for="email"></label>
+      <button class="subscribe__button" type="button">Subscribe</button>
+    </div>
   </div>
 </section>

@@ -2,16 +2,19 @@
   <div class="container">
     <picture>
       <source
-        srcset="
-          ./images/customers+subscribe/banana-mob.png    1x,
-          ./images/customers+subscribe/banana-mob-2x.png 2x
-        "
+        srcset="./images/tab-banan-281.png 1x, ./images/tab-banan-562.png 2x"
+        media="min-width:768px"
+        width="281px"
+      />
+      <source
+        srcset="./images/mob-banan-280.png 1x, ./images/mob-banan-560.png 2x"
+        media="min-width:480px"
+        width="161px"
       />
       <img
         class="subscribe__banana"
-        src="./images/customers+subscribe/banana-mob.png"
+        src="./images/mob-banan-280.png"
         alt="banana"
-        width="161px"
       />
     </picture>
     <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
@@ -22,7 +25,7 @@
     <div class="subscribe__container">
       <input
         id="email"
-        class="subscribe__input"
+        class="subscribe__input-email"
         type="email"
         name="email"
         required

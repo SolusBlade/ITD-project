@@ -1,11 +1,17 @@
-@import './common';
-@import './variables';
-@import './header';
-@import './hero';
-@import './offerings';
-@import './favorites';
-@import './customers';
-@import './subscribe';
-@import './footer';
-@import './modal';
+@import './utils/common';
+@import './utils/container';
+@import './utils/mixin';
+@import './utils/variables';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/offerings';
+@import './layouts/favorites';
+@import './layouts/customers';
+@import './layouts/subscribe';
+@import './layouts/footer';
+@import './layouts/modal';
+
+
+
 

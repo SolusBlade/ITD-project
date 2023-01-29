@@ -1,25 +1,27 @@
 .customers {
-    font-family: "Roboto";
-    font-style: normal;
-    margin: 0 auto;
-    background-image: url(../images/customers+subscribe/bgi320.jpg);
-    background-size: contain;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    padding: 60px 20px;
-    min-width: 280px;
+    background-image:url(../images/mob-customers-320.png), url(../images/mob-customers-640.png);
+    background-size: contain, contain;
+    background-position:bottom, bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding-top: 60px;
+    padding-bottom: 60px;
     @media screen and (min-width: 321px) {
-        background-image: url(../images/customers+subscribe/bgi480.jpg);
-        background-size: auto;
+        background-image: url(../images/mob-customers-480.png), url(../images/mob-customers-480.png);
+        background-size:auto, auto;
         padding-bottom: 90px;
+        background-position: bottom, bottom;
     }
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/tab-customers-768.png);
+        padding-bottom: 120px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: bottom;
     }
 
 &__star {
-        background-image: url(../images/customers+subscribe/star.svg), url(../images/customers+subscribe/star.svg),
-            url(../images/customers+subscribe/star.svg), url(../images/customers+subscribe/star.svg), url(../images/customers+subscribe/star.svg);
+        background-image: url(../images/star.svg), url(../images/star.svg),
+            url(../images/star.svg), url(../images/star.svg), url(../images/star.svg);
         background-repeat: no-repeat;
         background-position: 0, top 0 left 20px, top 0 left 40px, top 0 left 60px,
             top 0 left 80px;
@@ -30,45 +32,48 @@
     }
 
 &__title {
-    margin: 0;
     margin-bottom: 20px;
-    width: 280px;
-    font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.2;
-    color: var(--main-color);
+    color: $main-color;
+    @media screen and (min-width:768px) {
+        font-size: 42px;
+    }
 }
 
 &__pre-title {
-    width: 280px;
-    margin: 0;
     margin-bottom: 32px;
     width: 100%;;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.1;
-    color: var(--main-color);
+    color: $main-color;
+    @media screen and (min-width:768px) {
+        font-size: 16px;
+        line-height: 1.2;
+        }
 }
 
 &__text {
-    margin: 0;
     margin-bottom: 44px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.2;
-    color: var(--main-color);
+    color: $main-color;
+@media screen and (min-width:768px) {
+        font-size: 18px;
+        line-height: 1.2;
+    }
 }
 
 &__container {
     
     display: flex;
     width: 157px;
-    border-right: 0.854167px solid #7eb101;
+    border-right: 0.854167px solid $buttons-dark-green;
 }
-&__photo{
-    border-radius: 50%;
-}
+
 &__text-container {
     display: flex;
     flex-direction: column;
@@ -77,24 +82,18 @@
 }
 
 &__name {
-    margin: 0;
     margin-bottom: 2px;
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
-    color: var(--main-color);
+    color: $main-color;
 }
 
 &__nick-name {
-    margin: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    color: var(--main-color);
-}
-
-&__list {
-    padding: 0;
+    color: $main-color;
 }
 
 &__item {
@@ -102,12 +101,21 @@
     background-color: var(--white-color);
     border-radius: 0 30px 30px 30px;
     padding: 8px;
-    @media screen and (min-width:480px) {
-        width: 440px;
+    @media screen and (min-width:768px) {
+        width: calc((100% - 32px)/ 2);
     }
 }
 
 &__item + &__item {
     margin-top: 24px;
+    @media screen and (min-width:768px) {
+            margin-top: 0;
+        }
+}
+&__list{
+    @media screen and (min-width:768px) {
+            display: flex;
+            gap: 32px;
+        }
 }
 }

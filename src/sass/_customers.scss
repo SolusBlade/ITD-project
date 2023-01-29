@@ -1,22 +1,3 @@
-ul {
-    list-style: none;
-    margin: 0;
-}
-
-.container {
-    margin: 0 auto;
-    
-    @media screen and (min-width: 480px){
-        max-width: 480px;
-    }
-    @media screen and (min-width: 768px) {
-        max-width: 768px;
-    }
-    
-}
-
-
-
 .customers {
     font-family: "Roboto";
     font-style: normal;
@@ -85,7 +66,9 @@ ul {
     width: 157px;
     border-right: 0.854167px solid #7eb101;
 }
-
+&__photo{
+    border-radius: 50%;
+}
 &__text-container {
     display: flex;
     flex-direction: column;

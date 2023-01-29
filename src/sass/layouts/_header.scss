@@ -6,19 +6,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
-  .container {
-    margin-left: auto;
-    margin-right: auto;
+  .container--header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
-    @media screen and (max-width: 767px) {
-      max-width: 480px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
   }
   
   .mob-menu {

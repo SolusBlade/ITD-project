@@ -1,7 +1,6 @@
 .footer {
     background-color: var(--main-bg-color);
     box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
-    // height: 619px;
 
     padding: 60px 0;
     background-image: 
@@ -54,7 +53,6 @@
 
     padding: 0;
     margin: 0 81px 40px auto;
-
 }
 
 .menu__list {
@@ -66,30 +64,26 @@
 }
 
 .menu__link {
-    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: calc(16 / 14);
     color: #000000;
     text-decoration: none;
 }
 
-.subscribe__form {
+.mailing__form {
     margin-bottom: 20px;
 }
 
-.subscribe__label {
-    font-family: 'Roboto', sans-serif;
+.mailing__label {
     font-weight: 500;
     font-size: 14px;
     line-height: 150%;
     color: var(--main-color);
-
 }
 
-.subscribe__input {
+.mailing__input {
     display: block;
     width: 100%;
-
     height: 42px;
     background-color: var(--white-color);
     border: 0.854167px solid var(--accent-color);
@@ -99,14 +93,14 @@
     margin: 12px 0 0 0;
 }
 
-.subscribe__input::placeholder {
-    font-family: 'Roboto', sans-serif;
+.mailing__input::placeholder {
+    font-family: sans-serif;
     font-size: 12px;
     line-height: 150%;
     color: #505050;
 }
 
-.subscribe__btn {
+.mailing__btn {
     display: block;
     padding: 11px 22px;
     margin: 0 0 20px auto;
@@ -125,7 +119,6 @@
 }
 
 .privacy__text {
-    font-family: 'Roboto', sans-serif;
     font-size: 10px;
     line-height: calc(12 / 10);
     color: var(--main-color);
@@ -137,17 +130,14 @@
     margin: 0 0 40px 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .privacy__item {
     list-style: none;
-    /* padding: 0;
-    margin: 0; */
 }
 
 .privacy__link {
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 10px;
     line-height: calc(12 / 10);
@@ -156,7 +146,6 @@
 }
 
 .copyright {
-    font-family: 'Roboto', sans-serif;
     font-size: 10px;
     line-height: calc(12 / 10);
     color: var(--main-color);

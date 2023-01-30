@@ -6,14 +6,14 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         padding-top: 60px;
-        // padding-bottom: 73px;
+        padding-bottom: 73px;
         max-width: 768px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
-        // padding-bottom: 164px;
+        padding-bottom: 164px;
         max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
@@ -99,25 +99,20 @@
     background-color: var(--button-fokus-color);
 }
 
+
 .box {
-    // position: inherit;
     border-radius: 50%;
-    // z-index: 5;
     @media screen and (max-width: 767px) {
         display: none;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 320px;
         height: 320px;
-        // right: 0;
-        // top: 0;
         border: 14px solid var(--accent-color);
     }
     @media screen and (min-width: 1280px) {
         width: 580px;
         height: 580px;
-        // right: 30px;
-        // top: 14px;
         border: 26px solid var(--accent-color);
     }
 }
@@ -130,13 +125,11 @@
         top: 149px;
         right: 40px;
     }
-
     @media screen and (min-width: 1280px) {
         top: 14px;
         right: 30px;
     }
 }
-
 .swiper {
     position: absolute;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -147,7 +140,6 @@
         top: 14px;
         right: 30px;
     }
-    // width: 528px;
 }
 .swiper-button-next {
     top: 50%;
@@ -157,34 +149,6 @@
 .swiper-button-prev {
     top: 50%;
     left: -7%;
-}
-
-.slider {
-    border-radius: 50%;
-}
-.swiper-box {
-    position: relative;
-    position: absolute;
-
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-        top: 149px;
-        right: 40px;
-    }
-
-    @media screen and (min-width: 1280px) {
-        top: 14px;
-        right: 30px;
-    }
-}
-
-.swiper-button-next {
-    top: 50%;
-    right: -3%;
-}
-
-.swiper-button-prev {
-    top: 50%;
-    left: -3%;
 }
 
 .slider {

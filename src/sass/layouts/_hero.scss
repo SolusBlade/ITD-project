@@ -7,15 +7,21 @@
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         padding-top: 60px;
         padding-bottom: 73px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
         padding-bottom: 164px;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
     } 
 }
 
 .hero-container {
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: block;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -84,17 +90,19 @@
     width: 98px;
     height: 32px;
 
+    transition: color 250ms var(--animation-preset);
+
     font-weight: 500;
     font-size: 13px;
     line-height: 1.5;
     border: none;
     border-radius: 30px;
-    background-color: #BBF330;
+    background-color: var(--buttons-green);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: #FFE450;
+    background-color: var(--button-fokus-color);
 }
 
 .box {
@@ -111,7 +119,7 @@
         height: 320px;
         // right: 0;
         // top: 0;
-        border: 14px solid #FFE550;
+        border: 14px solid var(--accent-color);
     }
 
     @media screen and (min-width: 1280px) {
@@ -119,7 +127,7 @@
         height: 580px;
         // right: 30px;
         // top: 14px;
-        border: 26px solid #FFE550;
+        border: 26px solid var(--accent-color);
     }
 
 }

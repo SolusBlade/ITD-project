@@ -59,6 +59,7 @@
     @media screen and (min-width: 768px){
         flex-wrap: wrap;
         gap: 32px;
+        justify-content: center;
     }
 
     @media screen and (min-width: 1280px){
@@ -92,12 +93,13 @@
     
     @media screen and (max-width: 479px){    
         max-width: 280px;
-        max-height: 282px;    
+        max-height: 282px;  
+        
         &:nth-child(n + 4){
             display: none;
-        }
+        }  
     }
-   
+
     @media screen and (min-width: 480px){
         width: 280px;
         height: 280px;

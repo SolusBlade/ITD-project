@@ -60,7 +60,8 @@
     transition-duration: 250ms;
     transition-timing-function: $animation-preset;
 
-    &:hover{
+    &:hover,
+    &:focus{
         box-shadow: inset 0px 0px 0px 11px $buttons-green;
     }
 

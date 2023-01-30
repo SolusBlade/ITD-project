@@ -1,0 +1,133 @@
+.hero-container {
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        display: flex;
+        position: relative;
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+        display: block;
+        padding: 0 20px;
+    }
+}
+
+.hero-title {
+    font-weight: 700;
+
+    @media screen and (min-width: 1280px) {
+        padding-top: 159px;
+        padding-bottom: 28px;
+        width: 502px;
+        font-size: 48px;
+        line-height: 1.2;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        padding-top: 60px;
+        padding-bottom: 44px;
+        width: 537px;
+        font-size: 42px;
+        line-height: 1.19;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        padding-top: 60px;
+        padding-bottom: 44px;
+        width: 100%;
+        font-size: 28px;
+        line-height: 1.17;
+    }
+}
+
+.hero-desription {
+    font-weight: 400;
+
+    @media screen and (min-width: 1280px) {
+        padding-bottom: 46px;
+        width: 502px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        padding-bottom: 40px;
+        width: 336px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        padding-bottom: 28px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+.hero-button {
+    cursor: pointer;
+
+    width: 98px;
+    height: 32px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    border: none;
+    border-radius: 30px;
+    background-color: #BBF330;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: #FFE450;
+}
+
+.box {
+    // position: inherit;
+    border-radius: 50%;
+
+    // z-index: 5;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 320px;
+        height: 320px;
+        right: 0;
+        top: 0;
+        border: 14px solid #FFE550;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 580px;
+        height: 580px;
+        right: 30px;
+        top: 14px;
+        border: 26px solid #FFE550;
+    }
+
+}
+
+.swiper {
+    position: absolute;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        top: 149px;
+        right: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+        right: 30px;
+    }
+
+    // width: 528px;
+}

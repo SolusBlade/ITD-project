@@ -18,16 +18,19 @@
 .mob-menu {
   @media screen and (max-width: 767px) {
     position: absolute;
+    z-index: 3;
+    rotate: 180deg;
+    opacity: 0;
+    pointer-events: none;
     top: 50px;
-    right: 20px;
+    right: 50px;
     width: 130px;
     height: 255px;
-    background: var(--main-bg-color);
+    background: $main-bg-color;
     border-radius: 30px 0px 30px 30px;
     box-shadow: -2px 0px 24px 20px rgba(105, 105, 105, 0.1);
-    //-2px 0px 24px 20px #6969691a
     overflow: hidden;
-    transition: transform 600ms;
+    transition: transform 600ms, opacity 400ms;
     transform-origin: top right;
   }
 
@@ -37,7 +40,9 @@
 }
 
 .mob-menu.is-open {
-  transform: rotate(200deg) scale(0);
+  transform: rotate(-180deg);
+  opacity: 1;
+  pointer-events: all;
 }
 
 .mob-menu__list {
@@ -66,7 +71,7 @@
 
   @media screen and (max-width: 767px) {
     padding-left: 16px;
-    transition: background-color var(--animation-preset);
+    transition: background-color 250ms $animation-preset;
   }
 
   @media screen and (min-width: 768px) {
@@ -74,17 +79,18 @@
     padding-bottom: 28px;
     font-size: 14px;
     line-height: calc(16px / 14px);
+    transition: color 250ms $animation-preset, underline 250ms $animation-preset;
   }
 }
 
 .mob-menu__link:hover,
 .mob-menu__link:focus {
   @media screen and (max-width: 767px) {
-    background-color: var(--buttons-green);
+    background-color: $buttons-green;
   }
 
   @media screen and (min-width: 768px) {
-    color: var(--buttons-green);
+    color: $buttons-green;
     text-decoration: underline;
   }
 }
@@ -109,12 +115,12 @@
 }
 
 .menu-toggle__icon {
-  fill: var(--buttons-dark-green);
-  transition: fill var(--animation-preset);
+  fill: $buttons-dark-green;
+  transition: fill 250ms $animation-preset;
 }
 
 .menu-toggle-open:hover .menu-toggle__icon {
-  fill: var(--accent-color);
+  fill: $accent-color;
 }
 
 .menu-toggle-close {
@@ -126,7 +132,7 @@
 }
 
 .btn {
-  background: var(--buttons-green);
+  background: $buttons-green;
   border-radius: 30px;
   width: 98px;
   height: 32px;
@@ -136,11 +142,12 @@
   font-size: 13px;
   line-height: 150%;
   margin-left: 30px;
+  transition: background-color 250ms $animation-preset;
 }
 
 .btn:hover,
 .btn:focus {
-  background: var(--button-fokus-color);
+  background-color: $button-fokus-color;
 }
 
 @media screen and (max-width: 767px) {

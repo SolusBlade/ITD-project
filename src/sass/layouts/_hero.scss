@@ -6,14 +6,14 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         padding-top: 60px;
-        padding-bottom: 73px;
+        // padding-bottom: 73px;
         max-width: 768px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
-        padding-bottom: 164px;
+        // padding-bottom: 164px;
         max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
@@ -140,14 +140,41 @@
 .swiper {
     position: absolute;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-        top: 149px;
-        right: 40px;
+        top: 30px;
+        right: 8px;
     }
     @media screen and (min-width: 1280px) {
         top: 14px;
         right: 30px;
     }
     // width: 528px;
+}
+.swiper-button-next {
+    top: 50%;
+    right: -7%;
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: -7%;
+}
+
+.slider {
+    border-radius: 50%;
+}
+.swiper-box {
+    position: relative;
+    position: absolute;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        top: 149px;
+        right: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+        right: 30px;
+    }
 }
 
 .swiper-button-next {
@@ -184,6 +211,7 @@
         height: 40px;
     }
 }
+
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
     font-size: 24px;

@@ -1,3 +1,11 @@
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        @content;
+    }
+}
+
 .footer {
     background-color: var(--main-bg-color);
     box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
@@ -5,8 +13,6 @@
     padding: 60px 0;
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             padding: 100px 0;
-            max-width: 768px;
-            margin: 0 auto;
         }
 
     background-image: 
@@ -17,9 +23,7 @@
     background-size: auto auto, auto auto, auto auto;
     background-position: 58% 100%, top right, top 132px left;
 
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
+    @include retina {
             background-image: 
             url(../images/apple_banana_2xbg.jpg), 
             url(../images/orange_2x_bg.jpg), 
@@ -31,11 +35,23 @@
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             background-image:
                 url(../images/footer-tab-right-bg.jpg),
-                url(../images/footer-tab-bot-bg.jpg);
-                background-repeat: no-repeat, no-repeat;
-                background-size: auto auto, auto auto;
-                background-position: top right, bottom;
+                url(../images/footer-tab-orng-bg-min.png),
+                url(../images/footer-tab-bnnappl-bg-min.png),
+                url(../images/footer-tab-appl-bg-min.png);
+                background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+                background-size: auto auto, auto auto, auto auto, auto auto;
+                background-position: top right, bottom, bottom, bottom;
+                @include retina {
+                        background-image:
+                            url(../images/footer-tab-right-2xbg.jpg),
+                            url(../images/footer-tab-orng-2xbg-min.png),
+                            url(../images/footer-tab-bnnappl-2xbg-min.png),
+                            url(../images/footer-tab-appl-2xbg-min.png);
+                            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+                            background-size: 203px 365px, 184px 62px, 399px 128px, 282px 141px;
+                            background-position: top right, bottom left, left 41% bottom, bottom right;
                 }
+            }
 }
 
 .container {
@@ -182,7 +198,8 @@
 
 .footer__links {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        display: flex;;
+        display: flex;
+        // text-decoration: underline;
     }
 }
 
@@ -203,12 +220,13 @@
 }
 
 .privacy__link {
+    text-decoration: underline;
     font-weight: 400;
     font-size: 10px;
     line-height: calc(12 / 10);
-    list-style: none;
     color: var(--buttons-dark-green);
 }
+
 
 .copyright {
     font-size: 10px;
@@ -223,4 +241,3 @@
         margin-left: auto;
     }
 }
-

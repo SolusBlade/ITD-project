@@ -122,6 +122,21 @@
     }
 }
 
+.swiper-box {
+    position: relative;
+    position: absolute;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        top: 149px;
+        right: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+        right: 30px;
+    }
+}
+
 .swiper {
     position: absolute;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -133,6 +148,20 @@
         right: 30px;
     }
     // width: 528px;
+}
+
+.swiper-button-next {
+    top: 50%;
+    right: -3%;
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: -3%;
+}
+
+.slider {
+    border-radius: 50%;
 }
 
 .swiper-button-next,
@@ -154,4 +183,13 @@
         width: 48px;
         height: 40px;
     }
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    font-size: 24px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 24px;
 }

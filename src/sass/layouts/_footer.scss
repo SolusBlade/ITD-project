@@ -57,9 +57,13 @@
             }
             @media screen and (min-width: 1280px) {
                 background-image: url(../images/footer-desk-bg.png);
+                    background-repeat:no-repeat;
+                    background-size: auto auto;
+                    background-position: bottom;
                 @include retina {
                     background-image: url(../images/footer-desk-2xbg.png);
-                    
+                    background-size: 1211px 266px;
+                    background-position: bottom;
                 }
             }
 }

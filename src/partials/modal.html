@@ -6,7 +6,7 @@
       </svg>
     </button>
     <p class="modal__title">Order Form</p>
-    <form class="modal__form">
+    <form class="modal__form" id="modal-form">
       <div class="modal__field">
         <label for="user-name" class="input__title">Name</label>
         <div class="input__wrap">
@@ -31,17 +31,7 @@
         </div>
         <p class="error">Please enter a valid email address</p>
       </div>
-      <button class="modal__btn" type="submit">Send</button>
+      <button class="modal__btn" type="submit" id="submit-btn">Send</button>
     </form>
   </div>
 </div>
-
-<script>
-  function validateForm() {
-    var x = document.forms["form"]["fname"].value;
-    if (x == "") {
-      alert("Please enter a valid email address");
-      return false;
-    }
-  }
-</script>

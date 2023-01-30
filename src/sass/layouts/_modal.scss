@@ -158,4 +158,14 @@
     transition:
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        
+}
+
+.modal__btn--border {
+    border-color: red;
+}
+
+.modal__btn--success {
+    background-color: greenyellow;
 }

@@ -99,31 +99,28 @@
     background-color: var(--button-fokus-color);
 }
 
+
 .box {
-    // position: inherit;
     border-radius: 50%;
-    // z-index: 5;
     @media screen and (max-width: 767px) {
         display: none;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 320px;
         height: 320px;
-        // right: 0;
-        // top: 0;
         border: 14px solid var(--accent-color);
     }
     @media screen and (min-width: 1280px) {
         width: 580px;
         height: 580px;
-        // right: 30px;
-        // top: 14px;
         border: 26px solid var(--accent-color);
     }
 }
 
-.swiper {
+.swiper-box {
+    position: relative;
     position: absolute;
+
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         top: 149px;
         right: 40px;
@@ -132,7 +129,30 @@
         top: 14px;
         right: 30px;
     }
-    // width: 528px;
+}
+.swiper {
+    position: absolute;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        top: 30px;
+        right: 8px;
+    }
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+        right: 30px;
+    }
+}
+.swiper-button-next {
+    top: 50%;
+    right: -7%;
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: -7%;
+}
+
+.slider {
+    border-radius: 50%;
 }
 
 .swiper-button-next,
@@ -154,4 +174,14 @@
         width: 48px;
         height: 40px;
     }
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    font-size: 24px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 24px;
 }

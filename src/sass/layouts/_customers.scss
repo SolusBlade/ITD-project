@@ -22,7 +22,7 @@
             background-size: auto;
             background-position: bottom;
         }
-        @media screen and (min-width: 1200px){
+        @media screen and (min-width: 1280px){
             background-image: url(../images/des-customers-1280.png);
             padding-bottom: 200px;
             position: relative;
@@ -123,7 +123,7 @@
         @media screen and (min-width:768px) {
             width: calc((100% - 32px)/ 2);
         }
-        @media screen and (min-width:1200px){
+        @media screen and (min-width:1280px){
             width: calc((100% - 246px)/ 2);
         }
     }
@@ -141,7 +141,7 @@
             display: flex;
             gap: 32px;
         }
-        @media screen and (min-width:1200px){
+        @media screen and (min-width:1280px){
             gap: 139px;
         }
     }

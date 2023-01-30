@@ -5,6 +5,7 @@
 
     width: 100%;
     height: 100%;
+    overflow-y: auto;
 
     background-color: rgba(94, 99, 99, 0.7);;
     transition:
@@ -31,6 +32,7 @@
     transform: translate(-50%, -50%);
 
     @media screen and (max-width: 767px) {
+        max-width: 458px;
         width: 100%;
     }
 
@@ -42,10 +44,11 @@
 
 .modal__close {
     display: flex;
+    justify-content: center;
     align-items: center;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 12px;
+    top: 12px;
 
     width: 32px;
     height: 32px;
@@ -56,6 +59,10 @@
     cursor: pointer;
     transition:
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close__icon {
+    min-width: 24px;
 }
 
 .modal__title {
@@ -82,6 +89,8 @@
 
 .input__title {
     display: block;
+    margin-left: 12px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
@@ -104,7 +113,7 @@
     cursor: pointer;
     transition:
         border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+        
     &::placeholder {
         color: #C4C4C4;
     }
@@ -117,6 +126,11 @@
 
 .error {
     display: none;
+    color: var(--invalid-color);
+}
+
+.modal__input:not(:placeholder-shown):not(:focus):valid {
+    border-color: var(--buttons-dark-green);
 }
   
 .modal__input:not(:placeholder-shown):not(:focus):invalid {
@@ -125,7 +139,6 @@
   
 .modal__input:not(:placeholder-shown):not(:focus):invalid + .error {
     display: block;
-    color: var(--invalid-color);
 }
 
 .modal__btn {

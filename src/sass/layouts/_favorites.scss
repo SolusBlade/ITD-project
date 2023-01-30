@@ -13,8 +13,6 @@
 
     font-style: normal;
     text-align: center;
-    
-    
 
     @media screen and (min-width: 200px){
         font-size: 28px;
@@ -91,15 +89,17 @@
         box-shadow: inset 0px 0px 0px 11px $buttons-green;
     }
     
-    @media screen and (max-width: 479px){    
-        max-width: 280px;
-        max-height: 282px;  
-        
+    @media screen and (max-width: 767px){
         &:nth-child(n + 4){
             display: none;
-        }  
+        }
     }
 
+    @media screen and (max-width: 479px){    
+        max-width: 280px;
+        max-height: 282px;    
+    }
+   
     @media screen and (min-width: 480px){
         width: 280px;
         height: 280px;

@@ -1,0 +1,135 @@
+.task {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url(../images/mob-customers-320.png), url(../images/mob-customers-640.png);
+        background-size: cover, cover;
+        background-position: bottom, bottom;
+        background-repeat: no-repeat, no-repeat;
+    
+    
+        @media screen and (min-width: 399px) {
+            background-image: url(../images/mob-customers-480.png), url(../images/mob-customers-480.png);
+            background-size: cover, cover;
+            background-position: bottom, bottom;
+            background-repeat: no-repeat, no-repeat;
+            padding-bottom: 70px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            background-image: url(../images/tab-customers-768.png);
+            padding-bottom: 120px;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: bottom;
+        }
+}
+.customers {
+    
+
+    &__star {
+        background-image: url(../images/star.svg), url(../images/star.svg),
+            url(../images/star.svg), url(../images/star.svg), url(../images/star.svg);
+        background-repeat: no-repeat;
+        background-position: 0, top 0 left 20px, top 0 left 40px, top 0 left 60px,
+            top 0 left 80px;
+        width: 101px;
+        height: 16px;
+        padding: 0;
+        margin-bottom: 28px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.2;
+        color: $main-color;
+
+        @media screen and (min-width:768px) {
+            font-size: 42px;
+        }
+    }
+
+    &__pre-title {
+        margin-bottom: 32px;
+        width: 100%;
+        ;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.1;
+        color: $main-color;
+
+        @media screen and (min-width:768px) {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+
+    &__text {
+        margin-bottom: 44px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $main-color;
+
+        @media screen and (min-width:768px) {
+            font-size: 18px;
+            line-height: 1.2;
+        }
+    }
+
+    &__container {
+
+        display: flex;
+        width: 157px;
+        border-right: 0.854167px solid $buttons-dark-green;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 16px;
+    }
+
+    &__name {
+        margin-bottom: 2px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        color: $main-color;
+    }
+
+    &__nick-name {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: $main-color;
+    }
+
+    &__item {
+
+        background-color: var(--white-color);
+        border-radius: 0 30px 30px 30px;
+        padding: 8px;
+
+        @media screen and (min-width:768px) {
+            width: calc((100% - 32px)/ 2);
+        }
+    }
+
+    &__item+&__item {
+        margin-top: 24px;
+
+        @media screen and (min-width:768px) {
+            margin-top: 0;
+        }
+    }
+
+    &__list {
+        @media screen and (min-width:768px) {
+            display: flex;
+            gap: 32px;
+        }
+    }
+}

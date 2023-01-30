@@ -1,0 +1,119 @@
+.subscribe {
+    position: relative;
+    min-width: 280px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 82px;
+        padding-bottom: 100px;
+    }
+
+    &__banana {
+        position: absolute;
+        left: 50%;
+        top: -50px;
+        transform: translateX(-50%);
+
+        @media screen and (min-width: 399px) {
+            top: -60px;
+        }
+
+        @media screen and (min-width:768px) {
+            transform: translateX(25%);
+            top: -40px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 120%;
+        color: $main-color;
+        margin-bottom: 20px;
+
+        @media screen and (min-width:768px) {
+            font-size: 42px;
+        }
+    }
+
+    &__pre-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.1;
+        color: $main-color;
+        margin-top: 0;
+        margin-bottom: 40px;
+
+        @media screen and (min-width:768px) {
+            font-size: 16px;
+            line-height: 150%;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__input-email {
+        border: 0.854167px solid $accent-color;
+        border-radius: 30px;
+        width: 100%;
+        height: 42px;
+        padding: 12px;
+        margin-bottom: 20px;
+
+        @media screen and (min-width:768px) {
+            width: 395px;
+            margin-bottom: 0;
+            margin-right: 22px;
+        }
+    }
+
+    &__input-email::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: $subscribe-color;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__input-email:not(:placeholder-shown):required:valid {
+        border-color: $buttons-dark-green;
+    }
+
+    &__input-email:not(:placeholder-shown):required:invalid {
+        border-color: $invalid-color;
+    }
+}
+
+.subscribe__button {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: $subscribe-color;
+    background-color: $buttons-green;
+    border-radius: 30px;
+    border: none;
+    width: 103px;
+    height: 42px;
+    padding: 11px 22px;
+
+    @media screen and (min-width:768px) {
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $button-fokus-color;
+    }
+}
+
+.subscribe__container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    @media screen and(min-width: 768px) {
+        flex-direction: row;
+    }
+}

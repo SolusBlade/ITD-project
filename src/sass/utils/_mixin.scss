@@ -1,8 +1,7 @@
-@mixin font ($f-w, $f-s, $l-h, $l-s) {
+@mixin font ($f-w, $f-s, $l-h) {
     font-weight: $f-w;
         font-size: $f-s;
         line-height: $l-h;
-        letter-spacing: $l-s;
 }
 @mixin retina {
     @media (min-device-pixel-ratio: 2),

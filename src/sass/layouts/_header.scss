@@ -110,6 +110,7 @@
 
 .menu-toggle__icon {
   fill: var(--buttons-dark-green);
+  transition: fill var(--animation-preset);
 }
 
 .menu-toggle-open:hover .menu-toggle__icon {
@@ -135,6 +136,11 @@
   font-size: 13px;
   line-height: 150%;
   margin-left: 30px;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--button-fokus-color);
 }
 
 @media screen and (max-width: 767px) {

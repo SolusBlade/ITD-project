@@ -80,13 +80,12 @@
     border: 11px solid $accent-color;
     border-radius: 50%;
 
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: $animation-preset;
-
+    transition: border 250ms $animation-preset, transform 250ms $animation-preset, box-shadow 250ms $animation-preset;
     &:hover,
     &:focus{
-        border: 11px solid $buttons-green;
+        border-color: $buttons-green;
+        transform: scale(1.02);
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
     }
 
     @media screen and (max-width: 767px){

@@ -143,12 +143,17 @@
     line-height: calc(16 / 14);
     color: #000000;
     text-decoration: none;
+    &:hover {
+        color: var(--buttons-green);
+        text-decoration: underline;
+        transition: color 250ms $animation-preset;
+    }
 }
 
 .mailing__form {
     margin-bottom: 20px;
         @media screen and (min-width: 768px) and (max-width: 1279px) {
-            margin-bottom: 12px;;
+            margin-bottom: 12px;
         }
         @media screen and (min-width: 1280px) {
             max-width: 395px;
@@ -226,12 +231,13 @@
     color: var(--main-color);
     &:hover {
         border-color: var(--accent-color);
+        transition: border-color 300ms linear;
     }
 }
 
 .privacy__text {
-    font-size: 10px;
-    line-height: calc(12 / 10);
+    font-size: 12px;
+    line-height: calc(14 / 12);
     color: var(--main-color);
 
     margin: 0;
@@ -276,8 +282,13 @@
     font-size: 10px;
     line-height: calc(12 / 10);
     color: var(--buttons-dark-green);
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+            line-height: calc(14 / 12);
+        }
         @media screen and (min-width: 1280px) {
             font-size: 12px;
+            line-height: calc(14 / 12);
         }
 }
 
@@ -292,5 +303,11 @@
         display: flex;
         align-items: center;
         margin-left: auto;
+        font-size: 12px;
+        line-height: calc(14 / 12);
+    }
+    @media screen and (min-width: 1280px) {
+        font-size: 12px;
+        line-height: calc(14 / 12);
     }
 }

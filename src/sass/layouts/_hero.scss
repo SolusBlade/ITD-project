@@ -6,14 +6,12 @@
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         padding-top: 60px;
-        padding-bottom: 73px;
         max-width: 768px;
         margin-left: auto;
         margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
-        padding-bottom: 164px;
         max-width: 1280px;
         margin-left: auto;
         margin-right: auto;
@@ -138,7 +136,7 @@
     }
     @media screen and (min-width: 1280px) {
         top: 14px;
-        right: 30px;
+        right: 0;
     }
 }
 .swiper-button-next {

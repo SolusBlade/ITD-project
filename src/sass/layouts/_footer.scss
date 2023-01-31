@@ -143,10 +143,10 @@
     line-height: calc(16 / 14);
     color: #000000;
     text-decoration: none;
+    transition: color 300ms linear;
     &:hover {
         color: var(--buttons-green);
         text-decoration: underline;
-        transition: color 250ms $animation-preset;
     }
 }
 
@@ -229,9 +229,10 @@
     font-size: 13px;
     line-height: 150%;
     color: var(--main-color);
+    transition: border-color 300ms linear;
     &:hover {
         border-color: var(--accent-color);
-        transition: border-color 300ms linear;
+        cursor: pointer;
     }
 }
 

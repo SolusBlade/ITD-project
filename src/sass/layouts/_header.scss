@@ -1,5 +1,5 @@
 .header-page {
-  background: var(--main-bg-color);
+  background: $main-bg-color;
   box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
   height: 72px;
 }
@@ -19,19 +19,17 @@
   @media screen and (max-width: 767px) {
     position: absolute;
     z-index: 3;
-    rotate: 180deg;
-    opacity: 0;
-    pointer-events: none;
+    overflow: hidden;
     top: 50px;
     right: 50px;
     width: 130px;
     height: 255px;
     background: $main-bg-color;
     border-radius: 30px 0px 30px 30px;
-    box-shadow: -2px 0px 24px 20px rgba(105, 105, 105, 0.1);
-    overflow: hidden;
-    transition: transform 600ms, opacity 400ms;
+    box-shadow: -2px 0px 24px 20px rgba(15, 15, 15, 0.15);
+    transform: rotate(180deg) scale(0);
     transform-origin: top right;
+    transition: transform 350ms linear;
   }
 
   @media screen and (min-width: 768px) {
@@ -40,9 +38,8 @@
 }
 
 .mob-menu.is-open {
-  transform: rotate(-180deg);
-  opacity: 1;
-  pointer-events: all;
+  transform: rotate(0) scale(1);
+  transition: transform 550ms cubic-bezier(0, 1.55, 0.91, 0.9);
 }
 
 .mob-menu__list {
@@ -132,16 +129,16 @@
 }
 
 .btn {
-  background: $buttons-green;
-  border-radius: 30px;
   width: 98px;
   height: 32px;
-  cursor: pointer;
+  margin-left: 30px;
   border: none;
+  border-radius: 30px;
+  background-color: $buttons-green;
+  cursor: pointer;
   font-weight: 500;
   font-size: 13px;
   line-height: 150%;
-  margin-left: 30px;
   transition: background-color 250ms $animation-preset;
 }
 

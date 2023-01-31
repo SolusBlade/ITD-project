@@ -2,7 +2,7 @@
     background-color: $main-bg-color;
     padding: 60px 0;
 
-    @media screen and (min-width: 1280px){
+    @media screen and (min-width: 768px){
         padding: 100px 0;
     }
 }
@@ -61,7 +61,7 @@
     }
 
     @media screen and (min-width: 1280px){
-        gap: 30px;
+        gap: 31px;
     }
 
     @media screen and (max-width: 767px){
@@ -73,20 +73,20 @@
 
 .favorites__item{
     margin: 0;
-    padding: 29px 28px;
+    padding: calc(29px - 11px) calc(28px - 11px);
 
     background-color: $main-bg-color;
 
-    box-shadow: inset 0px 0px 0px 11px $accent-color;
+    border: 11px solid $accent-color;
     border-radius: 50%;
 
-    transition-property: all;
+    transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: $animation-preset;
 
     &:hover,
     &:focus{
-        box-shadow: inset 0px 0px 0px 11px $buttons-green;
+        border: 11px solid $buttons-green;
     }
 
     @media screen and (max-width: 767px){
@@ -108,29 +108,30 @@
     @media screen and (min-width: 768px){
         // flex-basis: calc((100% - 4 * 16px) / 2);
         // margin: 16px;
-        padding: 34px 35px;
+        padding: calc(34px - 14px) calc(35px - 14px);
         width: 336px;
         height: 338px;
 
-        box-shadow: inset 0px 0px 0px 14px $accent-color;
+        border: 14px solid $accent-color;
 
         &:hover,
         &:focus{
-            box-shadow: inset 0px 0px 0px 14px $buttons-green;
+            border: 14px solid $buttons-green;
         }
     }
 
     @media screen and (min-width: 1280px){
         // flex-basis: calc((100% - 4 * 16px) / 3);
-        padding: 40px 41px;
+        // margin: 15px;
+        padding: calc(40px - 16px) calc(41px - 16px);
         width: 395px;
         height: 397px;
 
-        box-shadow: inset 0px 0px 0px 16px $accent-color;
+        border: 16px solid $accent-color;
 
         &:hover,
         &:focus{
-            box-shadow: inset 0px 0px 0px 16px $buttons-green;
+            border: 16px solid $buttons-green;
         }
     }
 }

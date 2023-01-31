@@ -38,7 +38,7 @@ line-height: $l-h;
   .offerings__section {
     margin-top: 0;
     margin-bottom: 0;
-    min-width: 320px;
+    // min-width: 320px;
     width: 100%;
   }
 .offerings__container {
@@ -152,7 +152,7 @@ line-height: $l-h;
 .offerings__img {
   position: absolute;
   overflow: visible;
-  left: 38px;
+  left: 30px;
   bottom: 41px;
   width: 201px;
   height: 255px;
@@ -317,12 +317,17 @@ line-height: $l-h;
   }
   .offerings__link {
     @extend %flexCenter;
-    @include font(400, 14px, 1.5);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    // @include font(400, 14px, 1.5);
     color: $black-color;
     transition: color 250ms $animation-preset,
+        font-weight 250ms $animation-preset,
         text-decoration 250ms $animation-preset;
     &:hover,
     &:focus {
+      font-weight: 700;
       color: #7EB101;
      text-decoration: underline;
   }
@@ -331,17 +336,15 @@ line-height: $l-h;
   }
 }
   .offerings__icon-more {
-    translate: 8px;
-    scale: 1;
+    
     width: 13px;
     padding: 2px 4px;
     height: 13px;
     fill: currentColor;
-    transition: translate 250ms $animation-preset
-    scale 250ms $animation-preset;
+    transform: translateX(8px) scale(1);
+    transition: transform 250ms $animation-preset;
     // transition: box-shadow 250ms $animation-preset;
     .offerings__link:hover & {
-      translate: 16px;
-      scale: 1.75;
+      transform: translateX(16px) scale(1.75);
     }
   }

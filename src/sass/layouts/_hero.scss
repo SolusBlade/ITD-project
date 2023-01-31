@@ -117,39 +117,56 @@
 
 .swiper-box {
     position: absolute;
-
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         top: 149px;
         right: 40px;
+        width: 320px;
+        height: 320px;
     }
     @media screen and (min-width: 1280px) {
         top: 14px;
         right: 30px;
+        width: 580px;
+        height: 580px;
     }
 }
 .swiper {
     position: absolute;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
-        top: 30px;
+        top: 0;
         right: 0;
     }
     @media screen and (min-width: 1280px) {
-        top: 14px;
+        top: 0;
         right: 0;
     }
 }
 .swiper-button-next {
     top: 50%;
-    right: -7%;
+    right: -3%;
+    @media screen and (min-width: 1280px) {
+        right: -2%;
+    }
 }
-
 .swiper-button-prev {
     top: 50%;
-    left: -7%;
+    left: -3%;
+    @media screen and (min-width: 1280px) {
+        left: -2%;
+    }
 }
 
 .slider {
     border-radius: 50%;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 292px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 528px;
+    }
 }
 
 .swiper-button-next,
@@ -161,7 +178,7 @@
     background-color: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-
+    transition: box-shadow 250ms $animation-preset;
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 34px;
         height: 28px;
@@ -171,14 +188,28 @@
         width: 48px;
         height: 40px;
     }
+    &:hover{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+        &::after{
+            color: $buttons-dark-green;
+        }
+    }
 }
 
 .swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
+.swiper-button-prev:after {
+    transition: color 250ms $animation-preset;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        font-size: 18px;
+    }
     font-size: 24px;
+    width: auto;
 }
-
 .swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+.swiper-button-next:after {
+    transition: color 250ms $animation-preset;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        font-size: 18px;
+    }
     font-size: 24px;
 }

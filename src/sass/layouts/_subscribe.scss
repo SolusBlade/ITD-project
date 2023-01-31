@@ -97,8 +97,8 @@
 }
 
 .subscribe__button {
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 13px;
     line-height: 150%;
     color: $subscribe-color;
     background-color: $buttons-green;
@@ -107,11 +107,7 @@
     width: 103px;
     height: 42px;
     padding: 11px 22px;
-
-    @media screen and (min-width:768px) {
-        font-weight: 500;
-        font-size: 13px;
-    }
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {

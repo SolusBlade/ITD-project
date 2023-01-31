@@ -1,21 +1,27 @@
 .hero {
     position: relative;
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         padding-top: 60px;
         padding-bottom: 50px;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         padding-top: 60px;
         padding-bottom: 73px;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
     }
     @media screen and (min-width: 1280px) {
         padding-top: 159px;
         padding-bottom: 164px;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
     } 
 }
 
 .hero-container {
-    @media screen and (min-width: 320px) and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: block;
     }
     @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -30,22 +36,19 @@
 
 .hero-title {
     font-weight: 700;
-
     @media screen and (min-width: 1280px) {
         margin-bottom: 28px;
         width: 502px;
         font-size: 48px;
         line-height: 1.2;
     }
-
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         margin-bottom: 44px;
         width: 537px;
         font-size: 42px;
         line-height: 1.19;
     }
-
-    @media screen and (min-width: 320px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         margin-bottom: 44px;
         width: 100%;
         font-size: 28px;
@@ -55,22 +58,19 @@
 
 .hero-desription {
     font-weight: 400;
-
     @media screen and (min-width: 1280px) {
         margin-bottom: 46px;
         width: 502px;
         font-size: 16px;
         line-height: 1.5;
     }
-
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         margin-bottom: 40px;
         width: 336px;
         font-size: 16px;
         line-height: 1.5;
     }
-
-    @media screen and (min-width: 320px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
         margin-bottom: 28px;
         width: 100%;
         font-size: 14px;
@@ -84,58 +84,104 @@
     width: 98px;
     height: 32px;
 
+    transition: background-color 250ms var(--animation-preset);
+
     font-weight: 500;
     font-size: 13px;
     line-height: 1.5;
     border: none;
     border-radius: 30px;
-    background-color: #BBF330;
+    background-color: var(--buttons-green);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-    background-color: #FFE450;
+    background-color: var(--button-fokus-color);
 }
 
-.box {
-    // position: inherit;
-    border-radius: 50%;
 
-    // z-index: 5;
-    @media screen and (min-width: 320px) and (max-width: 767px) {
+.box {
+    border-radius: 50%;
+    @media screen and (max-width: 767px) {
         display: none;
     }
-
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 320px;
         height: 320px;
-        // right: 0;
-        // top: 0;
-        border: 14px solid #FFE550;
+        border: 14px solid var(--accent-color);
     }
-
     @media screen and (min-width: 1280px) {
         width: 580px;
         height: 580px;
-        // right: 30px;
-        // top: 14px;
-        border: 26px solid #FFE550;
+        border: 26px solid var(--accent-color);
     }
-
 }
 
-.swiper {
+.swiper-box {
+    position: relative;
     position: absolute;
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         top: 149px;
         right: 40px;
     }
-
     @media screen and (min-width: 1280px) {
         top: 14px;
         right: 30px;
     }
+}
+.swiper {
+    position: absolute;
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        top: 30px;
+        right: 8px;
+    }
+    @media screen and (min-width: 1280px) {
+        top: 14px;
+        right: 30px;
+    }
+}
+.swiper-button-next {
+    top: 50%;
+    right: -7%;
+}
 
-    // width: 528px;
+.swiper-button-prev {
+    top: 50%;
+    left: -7%;
+}
+
+.slider {
+    border-radius: 50%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    box-sizing: border-box;
+
+    color: #2C2C2C;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        width: 34px;
+        height: 28px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 48px;
+        height: 40px;
+    }
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    font-size: 24px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 24px;
 }

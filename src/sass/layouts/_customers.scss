@@ -22,6 +22,11 @@
             background-size: auto;
             background-position: bottom;
         }
+        @media screen and (min-width: 1280px){
+            background-image: url(../images/des-customers-1280.png);
+            padding-bottom: 200px;
+            position: relative;
+        }
 }
 .customers {
     
@@ -48,12 +53,12 @@
         @media screen and (min-width:768px) {
             font-size: 42px;
         }
+       
     }
 
     &__pre-title {
         margin-bottom: 32px;
         width: 100%;
-        ;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.1;
@@ -84,7 +89,9 @@
         width: 157px;
         border-right: 0.854167px solid $buttons-dark-green;
     }
-
+    &__photo{
+        border-radius: 50%;
+    }
     &__text-container {
         display: flex;
         flex-direction: column;
@@ -116,6 +123,9 @@
         @media screen and (min-width:768px) {
             width: calc((100% - 32px)/ 2);
         }
+        @media screen and (min-width:1280px){
+            width: calc((100% - 246px)/ 2);
+        }
     }
 
     &__item+&__item {
@@ -130,6 +140,9 @@
         @media screen and (min-width:768px) {
             display: flex;
             gap: 32px;
+        }
+        @media screen and (min-width:1280px){
+            gap: 139px;
         }
     }
 }

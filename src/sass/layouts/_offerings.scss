@@ -1,0 +1,347 @@
+$black-color: #000000;
+$mob320: 320px;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+%flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+@mixin font($f-w, $f-s, $l-h) {
+font-weight: $f-w;
+font-size: $f-s;
+line-height: $l-h;
+}
+@mixin retina {
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+}
+}
+@mixin mobile {
+@media screen and (min-width: $mobile) {
+    @content;
+}
+}
+  @mixin tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+  .offerings__section {
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 320px;
+    width: 100%;
+  }
+.offerings__container {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    background-image: url(/src/images/mob-offerings-320.png);
+    @include retina {
+      background-image: url(/src/images/mob-offerings-640.png);
+    }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include mobile {
+      background-image: url(/src/images/mob-offerings-480.png);
+      @include retina {
+        background-image: url(/src/images/mob-offerings-960.png);
+      }
+    }
+    @include tablet {
+      background-image: url(/src/images/tab-offerings-768.png);
+      @include retina {
+        background-image: url(/src/images/tab-offerings-1536.png);
+      }
+    }
+    @include tablet {
+      padding-top: 187px;
+      padding-bottom: 100px;
+    }
+    @include desktop {
+      padding-top: 230px;
+      padding-bottom: 43px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 90px;
+      @include desktop {
+        background-image: url(/src/images/des-offerings-1280.png);
+        @include retina {
+          background-image: url(/src/images/des-offerings-2560.png);
+        }
+      }
+      background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    // outline: 1px solid orangered;
+  }
+  .offering__img-outer-wrap {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 60px auto;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    @include tablet {
+      width: 357px;
+      height: 357px;
+      margin: 0 29px 60px 0;
+    }
+    @include desktop {
+      width: 550px;
+      height: 550px;
+      margin: 0;
+    }
+  }
+  .offerings__img-inner-wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    background-color: $main-bg-color;
+    @include tablet {
+      top: 13px;
+      left: 13px;
+      width: 325px;
+      height: 325px;
+    }
+    @include desktop {
+      top: 21px;
+      left: 21px;
+      width: 502px;
+      height: 502px;
+    }
+  }
+  .offering__img-shadow {
+    position: absolute;
+    width: 129px;
+    height: 44px;
+    background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      #2F583F 0%,
+      rgba(105, 105, 105, 0) 100%);
+    filter: blur(6.61818px);
+    background-repeat: no-repeat;
+    bottom: 27px;
+    left: 67px;
+    @include tablet {
+      width: 164px;
+      height: 57px;
+      bottom: 33px;
+      left: 85px;
+    }
+    @include desktop {
+      width: 252px;
+      height: 87px;
+      bottom: 51px;
+      left: 131px;
+    }
+  }
+.offerings__img {
+  position: absolute;
+  overflow: visible;
+  left: 38px;
+  bottom: 41px;
+  width: 201px;
+  height: 255px;
+  z-index: 5;
+  background-image: url(/src/images/mob-aple-202.png);
+  @include retina {
+    background-image: url(/src/images/mob-aple-404.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 202px;
+  background-position: center;
+  @include tablet {
+    width: 650px;
+    height: 325px;
+    bottom: 52px;
+    background-image: url(/src/images/tab-aple-258.png),
+      url(/src/images/tab-aple60-166.png),
+      url(/src/images/tab-aple30-108.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 258px 326px, 166px 210px, 108px 136px;
+    background-position: left, top right, top 132px left;
+    @include retina {
+      background-image: url(/src/images/tab-aple-515.png),
+        url(/src/images/tab-aple60-332.png),
+        url(/src/images/tab-aple30-216.png);
+      background-repeat: no-repeat, no-repeat, no-repeat;
+      background-size: 258px 329px, 166px 210px, 108px 136px;
+      background-position: left, left calc(256px + 75px) bottom, right bottom;
+    }
+  }
+  @include desktop {
+    width: 396px;
+    height: 502px;
+    left: 60px;
+    bottom: 78px;
+    background-image: url(/src/images/des-aple-396.png);
+    @include retina {
+      background-image: url(/src/images/des-aple-792.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 396px;
+  }
+}
+.offerings__general-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 28px;
+    @include tablet {
+      gap: 40px;
+    }
+    @include desktop {
+      align-items: flex-start;
+      margin-top: 30px;
+      width: 576px;
+      height: 464px;
+      gap: 32px;
+    }
+  }
+  .offerings__title-container {
+    max-width: 440px;
+    @include tablet {
+      max-width: 526px;
+    }
+  }
+  .offerings__title {
+    margin-bottom: 28px;
+    @include font(700, 28px, calc(33 / 28));
+    @include tablet {
+      @include font(null, 42px, calc(49 / 42));
+      margin-bottom: 20px;
+    }
+  }
+  .offerings__description {
+    margin: 0 26px 0 0;
+    @include tablet {
+      @include font(null, 16px, calc(19 / 16));
+    }
+    @include desktop {
+      @include font(null, null, calc(24 / 16));
+    }
+  }
+  .offerings__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 28px;
+    display: flex;
+    gap: 28px;
+    @include tablet {
+      flex-wrap: nowrap;
+      gap: 116px;
+      padding-right: calc(116 - 32);
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+      width: 576px;
+      gap: 67px;
+      padding-right: 0;
+    }
+  }
+  .offerings__item {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      max-width: 412px;
+    }
+  }
+  .offerings__item-title {
+    margin-bottom: 16px;
+    @include font(700, 18px, calc(21 / 18));
+    @include desktop {
+      @include font(null, null, calc(25 / 18));
+    }
+    &--rocket::before,
+    &--touch::before {
+      display: block;
+      content: ' ';
+      margin-bottom: 8px;
+      padding: 10px;
+      width: 48px;
+      height: 48px;
+      background-color: $white-color;
+      border-radius: 50%;
+      background-image: url(/src/images/icon-rocket.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 27px 27px;
+      // fill: #7EB101;
+    }
+    &--touch::before {
+      background-image: url(/src/images/icon-touch.svg);
+      background-size: 21px 28px;
+    }
+  }
+  .offerings__item-text {
+    @include font(400, 14px, calc(16 / 14));
+    @include desktop {
+      @include font(null, null, calc(21 / 14));
+    }
+  }
+  .offerings__order-wrap {
+    display: flex;
+    gap: 24px;
+  }
+  .order__button {
+    @extend %flexCenter;
+    padding: 10px 20px;
+    @include font(500, 13px, 1.5);
+    cursor: pointer;
+    background-color: $white-color;
+    border: 2px solid $buttons-dark-green;
+    border-radius: 30px;
+    transition: background-color 250ms $animation-preset,
+      border-color 250ms $animation-preset;
+    &:hover,
+    &:focus {
+      background-color: $buttons-green;
+      border-color: $buttons-green;
+    }
+  }
+  .offerings__link {
+    @extend %flexCenter;
+    @include font(400, 14px, 1.5);
+    color: $black-color;
+    transition: color 250ms $animation-preset,
+        text-decoration 250ms $animation-preset;
+    &:hover,
+    &:focus {
+      color: #7EB101;
+     text-decoration: underline;
+  }
+  @include desktop {
+   display: none;
+  }
+}
+  .offerings__icon-more {
+    translate: 8px;
+    scale: 1;
+    width: 13px;
+    padding: 2px 4px;
+    height: 13px;
+    fill: currentColor;
+    transition: translate 250ms $animation-preset
+    scale 250ms $animation-preset;
+    // transition: box-shadow 250ms $animation-preset;
+    .offerings__link:hover & {
+      translate: 16px;
+      scale: 1.75;
+    }
+  }

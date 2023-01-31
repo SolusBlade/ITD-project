@@ -11,7 +11,10 @@
     box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
 
     padding: 60px 0;
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            padding: 100px 0;
+        }
+        @media screen and (min-width: 1280px) {
             padding: 100px 0;
         }
 
@@ -32,7 +35,7 @@
             background-size: 253px 56px, 104px 259px, 110px 116px;
             background-position: 50% 100%, top right, top 132px left;
         }
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
             background-image:
                 url(../images/footer-tab-right-bg.jpg),
                 url(../images/footer-tab-orng-bg-min.png),
@@ -52,44 +55,52 @@
                             background-position: top right, bottom left, left 41% bottom, bottom right;
                 }
             }
-}
-
-.container {
-    padding-right: 20px;
-    padding-left: 20px;
-    margin: 0 auto;
-    @media screen and (min-width: 480px) {
-        max-width: 480px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        max-width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+            @media screen and (min-width: 1280px) {
+                background-image: url(../images/footer-desk-bg.png);
+                    background-repeat:no-repeat;
+                    background-size: auto auto;
+                    background-position: bottom;
+                @include retina {
+                    background-image: url(../images/footer-desk-2xbg.png);
+                    background-size: 1211px 266px;
+                    background-position: bottom;
+                }
+            }
 }
 
 .footer__nav {
     position: relative;
     margin-bottom: calc(60px - 6.2px);
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
-            margin-bottom: 100px;;
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            margin-bottom: 100px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin: 0;
         }
 }
 
 .footer__navigation {
     margin-bottom: 40px;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
         display: flex;
         align-items: center;
+    }
+    @media screen and (min-width: 1280px) {
+        align-items: center;
+        display: flex;
+        margin-bottom: 129px;
     }
 }
 
 .footer__logo {
     display: block;
     position: absolute;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-            position: static;
-        }
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        position: static;
+    }
+    @media screen and (min-width: 1280px) {
+        position: static;
+    }
 }
 
 .footer__menu {
@@ -98,12 +109,19 @@
 
     padding: 0;
     margin: 0 81px 0 auto;
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
             display: flex;
             margin: 0 0 0 114px;
             align-items: center;
             gap: 28px;
         }
+        @media screen and (min-width: 1280px) {
+            display: flex;
+            margin: 0 0 0 148px;
+            align-items: center;
+            gap: 28px;
+        }
+
 }
 
 .menu__list {
@@ -112,7 +130,10 @@
 
 .menu__list:not(:last-child) {
     margin-bottom: 20px;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            margin: 0;
+        }
+        @media screen and (min-width: 1280px) {
             margin: 0;
         }
 }
@@ -126,8 +147,15 @@
 
 .mailing__form {
     margin-bottom: 20px;
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
             margin-bottom: 12px;;
+        }
+        @media screen and (min-width: 1280px) {
+            max-width: 395px;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
 }
 
@@ -139,10 +167,17 @@
 }
 
 .mailing__wrap {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
         display: flex;
         gap: 13px;
+        margin-bottom: 12px;
     }
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        gap: 13px;
+        margin-bottom: 12px;
+        }
+    margin: 12px 0 0 0;
 }
 
 .mailing__input {
@@ -152,8 +187,11 @@
     background-color: var(--white-color);
     border: 0.854167px solid var(--accent-color);
     border-radius: 30px;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
             max-width: 280px;
+            margin: 0;
+        }
+        @media screen and (min-width: 1280px) {
             margin: 0;
         }
 
@@ -171,8 +209,11 @@
 .mailing__btn {
     display: block;
     padding: 11px 22px;
-    margin: 0 0 0 auto;
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 0 0 20px auto;
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            margin: 0;
+        }
+        @media screen and (min-width: 1280px) {
             margin: 0;
         }
 
@@ -197,9 +238,14 @@
 }
 
 .footer__links {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
         display: flex;
         // text-decoration: underline;
+    }
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -208,7 +254,12 @@
     padding: 0;
     display: flex;
     justify-content: space-around;
-        @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            justify-content: start;
+            gap: 20px;
+            margin: 0;
+        }
+        @media screen and (min-width: 1280px) {
             justify-content: start;
             gap: 20px;
             margin: 0;
@@ -225,8 +276,10 @@
     font-size: 10px;
     line-height: calc(12 / 10);
     color: var(--buttons-dark-green);
+        @media screen and (min-width: 1280px) {
+            font-size: 12px;
+        }
 }
-
 
 .copyright {
     font-size: 10px;
@@ -234,7 +287,7 @@
     color: var(--main-color);
     text-align: center;
     margin: 0;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
         text-align: start;
         display: flex;
         align-items: center;

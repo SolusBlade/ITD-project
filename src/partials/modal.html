@@ -6,47 +6,32 @@
       </svg>
     </button>
     <p class="modal__title">Order Form</p>
-    <form class="modal__form">
+    <form class="modal__form" id="modal-form">
       <div class="modal__field">
         <label for="user-name" class="input__title">Name</label>
         <div class="input__wrap">
-          <input
-            class="modal__input"
-            type="text"
-            name="user-name"
-            id="user-name"
-            placeholder="Your name"
-          />
+          <input class="modal__input" type="text" name="user-name" id="user-name" placeholder="Your name" minlength="3"
+            maxlength="25" required />
         </div>
         <p class="error">The name must be between 3 and 25 characters</p>
       </div>
       <div class="modal__field">
         <label for="user-tel" class="input__title">Phone number</label>
         <div class="input__wrap">
-          <input
-            class="modal__input"
-            type="tel"
-            name="user-tel"
-            id="user-tel"
-            placeholder="+38(0_ _) _ _ _   _ _   _ _"
-          />
+          <input class="modal__input" type="tel" name="user-tel" id="user-tel" placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            minlength="10" required />
         </div>
         <p class="error">This phone must be in the format 099 000 00 00</p>
       </div>
       <div class="modal__field modal__field--marg">
         <label for="user-email" class="input__title">E-mail</label>
         <div class="input__wrap">
-          <input
-            class="modal__input"
-            type="email"
-            name="user-email"
-            id="user-email"
-            placeholder="example@gmail.com"
-          />
+          <input class="modal__input" type="email" name="user-email" id="user-email" placeholder="example@gmail.com"
+            required />
         </div>
         <p class="error">Please enter a valid email address</p>
       </div>
-      <button class="modal__btn" type="submit">Send</button>
+      <button class="modal__btn" type="submit" id="submit-btn">Send</button>
     </form>
   </div>
 </div>

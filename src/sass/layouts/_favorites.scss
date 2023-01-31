@@ -28,10 +28,10 @@
 .favorites__text{
     margin: 0;
     margin-bottom: 60px;
-    
+
     font-style: normal;
     text-align: center;
-    
+
     @media screen and (min-width: 200px){
         font-size: 14px;
         line-height: calc(16 / 14);
@@ -51,9 +51,9 @@
     margin: 0;
     padding: 0;
     display: flex;
-    
+
     list-style: none;
-    
+
     @media screen and (min-width: 768px){
         flex-wrap: wrap;
         gap: 32px;
@@ -74,12 +74,12 @@
 .favorites__item{
     margin: 0;
     padding: 29px 28px;
-    
+
     background-color: $main-bg-color;
 
     box-shadow: inset 0px 0px 0px 11px $accent-color;
     border-radius: 50%;
-    
+
     transition-property: all;
     transition-duration: 250ms;
     transition-timing-function: $animation-preset;
@@ -88,7 +88,7 @@
     &:focus{
         box-shadow: inset 0px 0px 0px 11px $buttons-green;
     }
-    
+
     @media screen and (max-width: 767px){
         &:nth-child(n + 4){
             display: none;
@@ -99,7 +99,7 @@
         max-width: 280px;
         max-height: 282px;    
     }
-   
+
     @media screen and (min-width: 480px){
         width: 280px;
         height: 280px;

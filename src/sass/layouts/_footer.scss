@@ -140,13 +140,29 @@
 
 .menu__link {
     font-size: 14px;
+    position: relative;
     line-height: calc(16 / 14);
     color: #000000;
     text-decoration: none;
-    transition: color 300ms linear;
+    transition: color 250ms $animation-preset;
+    &::after{
+        content: "";
+        transform: scaleX(0);
+        transition: transform 300ms $animation-preset;
+      }
+      &:hover::after,
+      &:focus::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        bottom: -3px;
+        transform: scaleX(1);
+        width: 100%;
+        background-color: $buttons-green;
+      }
     &:hover {
         color: var(--buttons-green);
-        text-decoration: underline;
     }
 }
 
@@ -230,7 +246,7 @@
     font-size: 13px;
     line-height: 150%;
     color: var(--main-color);
-    transition: border-color 300ms linear;
+    transition: border-color 300ms $animation-preset, transform 250ms $animation-preset;
     &:hover {
         border-color: var(--accent-color);
         cursor: pointer;

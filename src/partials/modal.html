@@ -12,7 +12,11 @@
         <div class="input__wrap">
           <input class="modal__input" type="text" name="user-name" id="user-name" placeholder="Your name" minlength="3"
             maxlength="25" required />
-          <p class="error error--first">The name must be between 3 and 25 characters</p>
+          <p class="error error--first"><span>
+            <svg class="eror-ico" width="12" height="12">
+              <use href="./images/icons.svg#icon-eror"></use>
+            </svg>
+          </span>The name must be between 3 and 25 characters</p>
         </div>
       </div>
       <div class="modal__field">
@@ -20,7 +24,11 @@
         <div class="input__wrap">
           <input class="modal__input" type="tel" name="user-tel" id="user-tel" placeholder="+38(0_ _) _ _ _   _ _   _ _"
             minlength="10" required />
-          <p class="error error--second">This phone must be in the format 099 000 00 00</p>
+          <p class="error error--second"><span>
+            <svg class="eror-ico" width="12" height="12">
+              <use href="./images/icons.svg#icon-eror"></use>
+            </svg>
+          </span>This phone must be in the format 099 000 00 00</p>
         </div>
       </div>
       <div class="modal__field modal__field--marg">
@@ -28,7 +36,11 @@
         <div class="input__wrap">
           <input class="modal__input" type="email" name="user-email" id="user-email" placeholder="example@gmail.com"
             required />
-          <p class="error error--third">Please enter a valid email address</p>
+          <p class="error error--third"><span>
+            <svg class="eror-ico" width="12" height="12">
+              <use href="./images/icons.svg#icon-eror"></use>
+            </svg>
+          </span>Please enter a valid email address</p>
         </div>
       </div>
       <button class="modal__btn" type="submit" id="submit-btn">Send</button>

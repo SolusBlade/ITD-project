@@ -18,8 +18,8 @@ line-height: $l-h;
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     @content;
-}
-}
+  }
+  }
 @mixin mobile {
 @media screen and (min-width: $mobile) {
     @content;
@@ -54,7 +54,7 @@ line-height: $l-h;
       //   margin-top: -35px;
   }
 
-  }
+
 .offerings__container {
     padding-top: 70px;
     padding-bottom: 60px;
@@ -321,7 +321,7 @@ line-height: $l-h;
     border: 2px solid $buttons-dark-green;
     border-radius: 30px;
     transition: background-color 250ms $animation-preset,
-      border-color 250ms $animation-preset;
+      border-color 250ms $animation-preset, transform 250ms $animation-preset;
     &:hover,
     &:focus {
       background-color: $buttons-green;

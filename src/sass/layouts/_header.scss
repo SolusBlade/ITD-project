@@ -20,36 +20,27 @@
     position: absolute;
     z-index: 3;
     overflow: hidden;
-    top: 20px;
+    top: 50px;
     right: 20px;
     width: 130px;
     height: 255px;
-    background: $main-bg-color;
+    background-color: $main-bg-color;
     border-radius: 30px 0px 30px 30px;
-    
-    transform: scaleY(0);
-    opacity: 0;
-    //  rotate(180deg)
-    // transform-origin: top right;
-    transform-origin: top;
-    @media screen and (max-width: 767px) {
-      transition: transform 250ms $animation-preset, box-shadow 250ms $animation-preset, opacity 300ms $animation-preset;
-    }
+    box-shadow: -2px 0px 24px 10px rgba(15, 15, 15, 0.15);
+    transform: perspective(1000px) rotateX(270deg);
+    transform-origin: 0 20px;
+    transition: transform 300ms $animation-preset;
   }
+
   @media screen and (min-width: 768px) {
     margin-left: auto;
-    transition: none;
   }
 }
+
 .mob-menu.is-open {
-  
-  @media screen and (max-width: 767px) {
-    transform: scaleY(1); 
-    opacity: 1;
-    box-shadow: -2px 0px 24px 20px rgba(15, 15, 15, 0.15);
-  }
-  // rotate(0)
+  transform: perspective(1000px) rotateX(0);
 }
+
 .mob-menu__list {
   @media screen and (min-width: 768px) {
     display: flex;

@@ -70,12 +70,12 @@
 
 .footer__nav {
     position: relative;
-    margin-bottom: calc(60px - 6.2px);
+    margin-bottom: calc(30px - 6.2px);
         @media screen and (min-width: 768px) and (max-width: 1279px) {
-            margin-bottom: 100px;
+            margin-bottom: 35px;
         }
         @media screen and (min-width: 1280px) {
-            margin: 0;
+            margin: 0 0 20px 0;
         }
 }
 
@@ -88,7 +88,7 @@
     @media screen and (min-width: 1280px) {
         align-items: center;
         display: flex;
-        margin-bottom: 129px;
+        margin-bottom: calc(129px - 63px);
     }
 }
 
@@ -153,7 +153,7 @@
 .mailing__form {
     margin-bottom: 20px;
         @media screen and (min-width: 768px) and (max-width: 1279px) {
-            margin-bottom: 12px;
+            margin-bottom: 20px;
         }
         @media screen and (min-width: 1280px) {
             max-width: 395px;
@@ -311,4 +311,71 @@
         font-size: 12px;
         line-height: calc(14 / 12);
     }
+}
+// ___________SOC-LINKS-ICONS___________
+// ___________SOC-LINKS-ICONS___________
+// ___________SOC-LINKS-ICONS___________
+.soc-links {
+    @media screen and (min-width: 768px) {
+            max-width: 230px;
+            margin: 0 auto;
+        }
+}
+
+.soc-links__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--main-color);
+    text-align: center;
+
+    margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+        text-align: center;
+        margin: 0 0 7px 0;
+    }
+}
+
+.soc-links___list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    @media screen and (min-width: 1280px) {
+        gap: 30px;
+    }
+}
+
+.soc-links__item {
+    width: 35px;
+    height: 35px;
+}
+
+.soc-links__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: background-color 300ms $animation-preset, transform 300ms $animation-preset, box-shadow 300ms $animation-preset;
+}
+
+.soc-links__icon {
+    fill: var(---main-color);
+    transition: fill 300ms $animation-preset;
+}
+
+.soc-links__link:hover, .soc-links__link:focus {
+    background-color: var(--button-fokus-color);
+    transform: scale(1.15);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
+}
+.soc-links__link:hover .soc-links__icon,
+.soc-links__link:focus .soc-links__icon {
+    fill: var(--main-bg-color);
 }

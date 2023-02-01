@@ -39,7 +39,7 @@ line-height: $l-h;
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
-  //  1920 stretch
+     //  1920 stretch
       // @include desktop {
       //   background-image: url(/src/images/des-offerings-1280.png);
       //   @include retina {
@@ -50,6 +50,9 @@ line-height: $l-h;
       //   background-size: cover;
       //   max-width: 1920px;
       // }
+      // @media screen and (min-width: 768px) and (max-width: 1279px) {
+      //   margin-top: -35px;
+  }
 
   }
 .offerings__container {

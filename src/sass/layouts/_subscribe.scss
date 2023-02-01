@@ -104,8 +104,9 @@
     background-color: $buttons-green;
     border-radius: 30px;
     border: none;
-    width: 103px;
-    height: 42px;
+    cursor: pointer;
+    // width: 103px;
+    // height: 42px;
     padding: 11px 22px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 

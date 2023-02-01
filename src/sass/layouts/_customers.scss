@@ -7,7 +7,7 @@
         background-repeat: no-repeat, no-repeat;
     
     
-        @media screen and (min-width: 399px) {
+        @media screen and (min-width: 399px) and (max-width:767px){
             background-image: url(../images/mob-customers-480.png), url(../images/mob-customers-480.png);
             background-size: cover, cover;
             background-position: bottom, bottom;
@@ -15,7 +15,7 @@
             padding-bottom: 70px;
         }
     
-        @media screen and (min-width: 768px) {
+        @media screen and (max-width: 768px) {
             background-image: url(../images/tab-customers-768.png);
             padding-bottom: 120px;
             background-repeat: no-repeat;
@@ -23,13 +23,19 @@
             background-position: bottom;
         }
         @media screen and (min-width: 1280px){
-            background-image: url(../images/des-customers-1280.png);
-            padding-bottom: 200px;
+            // background-image: url(../images/des-customers-1280.png);
+            // padding-bottom: 200px;
             position: relative;
         }
 }
 .customers {
-    
+    @media screen and (min-width: 1280px) {
+            background-image: url(../images/des-customers-1280.png);
+            padding-bottom: 200px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+    }
 
     &__star {
         background-image: url(../images/star.svg), url(../images/star.svg),

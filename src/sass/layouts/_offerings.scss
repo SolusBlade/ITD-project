@@ -18,8 +18,8 @@ line-height: $l-h;
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     @content;
-}
-}
+  }
+  }
 @mixin mobile {
 @media screen and (min-width: $mobile) {
     @content;
@@ -38,37 +38,48 @@ line-height: $l-h;
   .offerings__section {
     margin-top: 0;
     margin-bottom: 0;
-    // min-width: 320px;
     width: 100%;
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      margin-top: -35px;
+     //  1920 stretch
+      // @include desktop {
+      //   background-image: url(/src/images/des-offerings-1280.png);
+      //   @include retina {
+      //     background-image: url(/src/images/des-offerings-2560.png);
+      //   }
+      //   background-size: 100%;
+      //   background-repeat: no-repeat;
+      //   background-size: cover;
+      //   max-width: 1920px;
+      // }
+      // @media screen and (min-width: 768px) and (max-width: 1279px) {
+      //   margin-top: -35px;
   }
-  }
+
+
 .offerings__container {
     padding-top: 70px;
     padding-bottom: 60px;
-    background-image: url(/src/images/mob-offerings-320.png);
-    @include retina {
-      background-image: url(/src/images/mob-offerings-640.png);
+    @media  screen and (max-width: 479px) {
+      background-image: url(/src/images/mob-offerings-320.png);
+      @include retina {
+        background-image: url(/src/images/mob-offerings-640.png);
+      }
     }
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    @include mobile {
+    @media  screen and (min-width: 480px) and (max-width: 767px)  {
       background-image: url(/src/images/mob-offerings-480.png);
       @include retina {
         background-image: url(/src/images/mob-offerings-960.png);
       }
     }
-    @include tablet {
+    @media  screen and (min-width: 768px) and (max-width: 1279px) {
+      padding-top: 187px;
+      padding-bottom: 100px;
       background-image: url(/src/images/tab-offerings-768.png);
       @include retina {
         background-image: url(/src/images/tab-offerings-1536.png);
       }
-    }
-    @include tablet {
-      padding-top: 187px;
-      padding-bottom: 100px;
     }
     @include desktop {
       padding-top: 230px;
@@ -76,18 +87,17 @@ line-height: $l-h;
       display: flex;
       flex-wrap: wrap;
       gap: 90px;
-      @include desktop {
-        background-image: url(/src/images/des-offerings-1280.png);
+      background-image: url(/src/images/des-offerings-1280.png);
         @include retina {
           background-image: url(/src/images/des-offerings-2560.png);
         }
       }
-      background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    //   background-size: 100%;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     }
     // outline: 1px solid orangered;
-  }
+
   .offering__img-outer-wrap {
     position: relative;
     width: 280px;
@@ -176,7 +186,7 @@ line-height: $l-h;
       url(/src/images/tab-aple30-108.png);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 258px 326px, 166px 210px, 108px 136px;
-    background-position: left, top right, top 132px left;
+    background-position: left, left calc(256px + 75px) bottom, right bottom;
     @include retina {
       background-image: url(/src/images/tab-aple-515.png),
         url(/src/images/tab-aple60-332.png),
@@ -311,7 +321,7 @@ line-height: $l-h;
     border: 2px solid $buttons-dark-green;
     border-radius: 30px;
     transition: background-color 250ms $animation-preset,
-      border-color 250ms $animation-preset;
+      border-color 250ms $animation-preset, transform 250ms $animation-preset;
     &:hover,
     &:focus {
       background-color: $buttons-green;

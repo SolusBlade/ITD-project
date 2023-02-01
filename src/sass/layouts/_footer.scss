@@ -157,6 +157,7 @@
         }
         @media screen and (min-width: 1280px) {
             max-width: 395px;
+            width: 100%;
             margin: 0;
             position: absolute;
             top: 0;
@@ -213,7 +214,7 @@
 
 .mailing__btn {
     display: block;
-    padding: 11px 22px;
+    padding: 10px 21.5px;
     margin: 0 0 20px auto;
         @media screen and (min-width: 768px) and (max-width: 1279px) {
             margin: 0;

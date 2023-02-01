@@ -74,8 +74,9 @@
     &-button {
         cursor: pointer;
     
-        width: 98px;
-        height: 32px;
+        // width: 98px;
+        // height: 32px;
+        padding: 6px 18px;
     
         transition: background-color 250ms var(--animation-preset);
     

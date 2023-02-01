@@ -247,6 +247,7 @@
 .footer__links {
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         display: flex;
+        margin-top: 135px;
         // text-decoration: underline;
     }
     @media screen and (min-width: 1280px) {
@@ -317,9 +318,14 @@
 // ___________SOC-LINKS-ICONS___________
 .soc-links {
     @media screen and (min-width: 768px) {
-            max-width: 230px;
-            margin: 0 auto;
-        }
+        max-width: 230px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px){
+        margin: 0;
+        margin-left: auto;
+        margin-top: -123px;
+    }
 }
 
 .soc-links__text {
@@ -333,6 +339,10 @@
     @media screen and (min-width: 768px) {
         text-align: center;
         margin: 0 0 7px 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px){
+        margin: 0;
+        margin-bottom: 12px;  
     }
 }
 
@@ -362,18 +372,17 @@
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    transition: background-color 300ms $animation-preset, transform 300ms $animation-preset, box-shadow 300ms $animation-preset;
+    transition: background-color 300ms $animation-preset, box-shadow 300ms $animation-preset;
 }
 
 .soc-links__icon {
-    fill: var(---main-color);
+    fill: #505050;
     transition: fill 300ms $animation-preset;
 }
 
 .soc-links__link:hover, .soc-links__link:focus {
     background-color: var(--button-fokus-color);
-    transform: scale(1.15);
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 .soc-links__link:hover .soc-links__icon,
 .soc-links__link:focus .soc-links__icon {

@@ -1,111 +1,168 @@
 <section class="favorites">
   <div class="container">
-    <h2 class="favorites__title" id="menu">Some of Our Favorites</h2>
+    <h2 class="favorites__title">Some of Our Favorites</h2>
     <p class="favorites__text">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
     </p>
     <ul class="favorites__list">
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-burger-315.jpg 315w,
-              ../src/images/des-burger-630.jpg 630w,
-              ../src/images/tab-burger-268.jpg 268w,
-              ../src/images/tab-burger-536.jpg 536w,
-              ../src/images/mob-burger-224.jpg 224w,
-              ../src/images/mob-burger-448.jpg 448w
+              ./images/des-burger-315.jpg 1x,
+              ./images/des-burger-630.jpg 2x
             "
-            class="favorites__img"
-            src="../src/images/des-burger-315.jpg"
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, (min-width: 479px) 100vw, 100vw"
-            alt="picture of hamburger"
+            media="(min-width: 1280px)"
           />
-        </a>
+          <source
+            srcset="
+              ./images/tab-burger-268.jpg 1x,
+              ./images/tab-burger-536.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/mob-burger-224.jpg 1x,
+              ./images/mob-burger-448.jpg 2x
+            "
+            media="(min-width: 220px)"
+          />
+          <img
+            class="favorites__img"
+            src="/src/images/des-burger-315.jpg"
+            alt="burger photo"
+          />
+        </picture>
       </li>
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-pasta-315.jpg 315w,
-              ../src/images/des-pasta-630.jpg 630w,
-              ../src/images/tab-pasta-269.jpg 269w,
-              ../src/images/tab-pasta-538.jpg 538w,
-              ../src/images/mob-pasta-225.jpg 225w,
-              ../src/images/mob-pasta-449.jpg 449w
+              ./images/des-pasta-315.jpg 1x,
+              ./images/des-pasta-630.jpg 2x
             "
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, (min-width: 479px) 100vw, 100vw"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/tab-pasta-269.jpg 1x,
+              ./images/tab-pasta-538.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/mob-pasta-225.jpg 1x,
+              ./images/mob-pasta-449.jpg 2x
+            "
+            media="(min-width: 220px)"
+          />
+          <img
             class="favorites__img"
-            src="../src/images/des-pasta-315.jpg"
+            src="/src/images/des-pasta-315.jpg"
             alt="picture of pasta"
           />
-        </a>
+        </picture>
       </li>
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-pizza-315.jpg 315w,
-              ../src/images/des-pizza-630.jpg 630w,
-              ../src/images/tab-pizza-268.jpg 268w,
-              ../src/images/tab-pizza-536.jpg 536w,
-              ../src/images/mob-pizza-224.jpg 224w,
-              ../src/images/mob-pizza-448.jpg 448w
+              ./images/des-pizza-315.jpg 1x,
+              ./images/des-pizza-630.jpg 2x
             "
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, (min-width: 479px) 100vw, 100vw"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/tab-pizza-268.jpg 1x,
+              ./images/tab-pizza-536.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/mob-pizza-224.jpg 1x,
+              ./images/mob-pizza-448.jpg 2x
+            "
+            media="(min-width: 200px)"
+          />
+          <img
             class="favorites__img"
-            src="../src/images/des-pizza-315.jpg"
+            src="/src/images/des-pizza-315.jpg"
             alt="picture of pizza"
           />
-        </a>
+        </picture>
       </li>
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-chicken-315.jpg 315w,
-              ../src/images/des-chicken-630.jpg 630w,
-              ../src/images/tab-chicken-268.jpg 268w,
-              ../src/images/tab-chicken-536.jpg 536w
+              ./images/des-chicken-315.jpg 1x,
+              ./images/des-chicken-630.jpg 2x
             "
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/tab-chicken-268.jpg 1x,
+              ./images/tab-chicken-536.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
             class="favorites__img"
-            src="../src/images/des-chicken-315.jpg"
+            src="/src/images/des-chicken-315.jpg"
             alt="picture of cooked chicken"
           />
-        </a>
+        </picture>
       </li>
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-salat-315.jpg 315w,
-              ../src/images/des-salat-630.jpg 630w,
-              ../src/images/tab-salat-269.jpg 269w,
-              ../src/images/tab-salat-538.jpg 538w
+              ./images/des-salat-315.jpg 1x,
+              ./images/des-salat-630.jpg 2x
             "
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/tab-salat-269.jpg 1x,
+              ./images/tab-salat-538.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
             class="favorites__img"
-            src="../src/images/des-salat-315.jpg"
+            src="/src/images/des-salat-315.jpg"
             alt="picture of salat"
           />
-        </a>
+        </picture>
       </li>
       <li class="favorites__item">
-        <a href="">
-          <img
+        <picture>
+          <source
             srcset="
-              ../src/images/des-borshch-315.jpg 315w,
-              ../src/images/des-borshch-630.jpg 630w,
-              ../src/images/tab-borshch-268.jpg 268w,
-              ../src/images/tab-borshch-536.jpg 536w
+              ./images/des-borshch-315.jpg 1x,
+              ./images/des-borshch-630.jpg 2x
             "
-            sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="
+              ./images/tab-borshch-268.jpg 1x,
+              ./images/tab-borshch-536.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
             class="favorites__img"
-            src="../src/images/des-borshch-315.jpg"
+            src="/src/images/des-borshch-315.jpg"
             alt="picture of borshch"
           />
-        </a>
+        </picture>
       </li>
     </ul>
   </div>

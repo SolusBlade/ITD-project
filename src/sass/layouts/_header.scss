@@ -42,9 +42,12 @@
   }
 }
 .mob-menu.is-open {
-  transform: scaleY(1); 
-  opacity: 1;
-  box-shadow: -2px 0px 24px 20px rgba(15, 15, 15, 0.15);
+  
+  @media screen and (max-width: 767px) {
+    transform: scaleY(1); 
+    opacity: 1;
+    box-shadow: -2px 0px 24px 20px rgba(15, 15, 15, 0.15);
+  }
   // rotate(0)
 }
 .mob-menu__list {

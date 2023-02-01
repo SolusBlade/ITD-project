@@ -80,7 +80,7 @@
     border: 11px solid $accent-color;
     border-radius: 50%;
 
-    transition: border 250ms $animation-preset, transform 250ms $animation-preset, box-shadow 250ms $animation-preset;
+    transition: border-color 250ms $animation-preset, transform 250ms $animation-preset, box-shadow 250ms $animation-preset;
     &:hover,
     &:focus{
         border-color: $buttons-green;
@@ -115,7 +115,7 @@
 
         &:hover,
         &:focus{
-            border: 14px solid $buttons-green;
+            border-color: $buttons-green;
         }
     }
 
@@ -130,7 +130,7 @@
 
         &:hover,
         &:focus{
-            border: 16px solid $buttons-green;
+            border-color: $buttons-green;
         }
     }
 }

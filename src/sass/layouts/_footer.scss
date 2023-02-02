@@ -219,6 +219,13 @@
 
     padding: 0 12px 0;
     margin: 12px 0 20px 0;
+    &:not(:placeholder-shown):required:valid {
+        border-color: $buttons-dark-green;
+    }
+
+    &:not(:placeholder-shown):required:invalid {
+        border-color: $invalid-color;
+    }
 }
 
 .mailing__input::placeholder {

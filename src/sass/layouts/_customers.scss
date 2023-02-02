@@ -1,13 +1,12 @@
 .task {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(../images/mob-customers-320.png);
-        background-size: cover, cover;
-        background-position: bottom, bottom;
-        background-repeat: no-repeat, no-repeat;
-    
-    
-        
+        @media screen and (max-width: 479px){
+            background-image: url(../images/mob-customers-320.png);
+            background-size: cover, cover;
+            background-position: bottom, bottom;
+            background-repeat: no-repeat, no-repeat;
+        }
         @media screen and (min-width: 1280px){
             position: relative;
         }

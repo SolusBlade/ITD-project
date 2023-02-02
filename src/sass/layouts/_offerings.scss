@@ -42,6 +42,8 @@ line-height: $l-h;
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 60px;
 
     @media  screen and (min-width: 480px) and (max-width: 767px)  {
       background-image: url(/src/images/mob-offerings-480.png);
@@ -61,17 +63,20 @@ line-height: $l-h;
         @include retina {
           background-image: url(/src/images/des-offerings-2560.png);
         }
+        padding-top: 230px;
+        padding-bottom: 43px;
         max-width: 1920px;
         margin: 0 auto;
       }
       @media screen and (min-width: 768px) and (max-width: 1279px) {
+        padding-top: 187px;
+        padding-bottom: 100px;
         margin-top: -35px;
       }
   }
 
 .offerings__container {
-    padding-top: 70px;
-    padding-bottom: 60px;
+
     @media  screen and (max-width: 479px) {
       background-image: url(/src/images/mob-offerings-320.png);
       @include retina {
@@ -81,13 +86,7 @@ line-height: $l-h;
       background-repeat: no-repeat;
       background-size: cover;
     }
-    @media  screen and (min-width: 768px) and (max-width: 1279px) {
-      padding-top: 187px;
-      padding-bottom: 100px;
-    }
     @include desktop {
-      padding-top: 230px;
-      padding-bottom: 43px;
       display: flex;
       flex-wrap: wrap;
       gap: 90px;

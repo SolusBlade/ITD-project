@@ -1,6 +1,4 @@
 .task {
-    padding-top: 60px;
-    padding-bottom: 60px;
         @media screen and (max-width: 479px){
             background-image: url(../images/mob-customers-320.png);
             background-size: cover, cover;
@@ -17,6 +15,7 @@
             background-size: cover, cover;
             background-position: bottom, bottom;
             background-repeat: no-repeat, no-repeat;
+            padding-top: 60px;
             padding-bottom: 60px;
         }
     
@@ -29,6 +28,7 @@
         }
     @media screen and (min-width: 1280px) {
             background-image: url(../images/des-customers-1280.png);
+            padding-top: 100px;
             padding-bottom: 200px;
             background-repeat: no-repeat;
             background-size: cover;

@@ -1,34 +1,33 @@
 .task {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url(../images/mob-customers-320.png), url(../images/mob-customers-640.png);
+    background-image: url(../images/mob-customers-320.png);
         background-size: cover, cover;
         background-position: bottom, bottom;
         background-repeat: no-repeat, no-repeat;
     
     
-        @media screen and (min-width: 399px) and (max-width:767px){
-            background-image: url(../images/mob-customers-480.png), url(../images/mob-customers-480.png);
-            background-size: cover, cover;
-            background-position: bottom, bottom;
-            background-repeat: no-repeat, no-repeat;
-            padding-bottom: 70px;
-        }
-    
-        @media screen and (max-width: 768px) {
-            background-image: url(../images/tab-customers-768.png);
-            padding-bottom: 120px;
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-position: bottom;
-        }
+        
         @media screen and (min-width: 1280px){
-            // background-image: url(../images/des-customers-1280.png);
-            // padding-bottom: 200px;
             position: relative;
         }
 }
 .customers {
+    @media screen and (min-width: 399px) {
+            background-image: url(../images/mob-customers-480.png);
+            background-size: cover, cover;
+            background-position: bottom, bottom;
+            background-repeat: no-repeat, no-repeat;
+            padding-bottom: 60px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            background-image: url(../images/tab-customers-768.png);
+            padding-bottom: 120px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
     @media screen and (min-width: 1280px) {
             background-image: url(../images/des-customers-1280.png);
             padding-bottom: 200px;

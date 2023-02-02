@@ -42,9 +42,10 @@ line-height: $l-h;
     background-size: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 70px;
-    padding-bottom: 60px;
-
+    @media screen and (min-width: 480px) {
+      padding-top: 70px;
+      padding-bottom: 60px;
+    }
     @media  screen and (min-width: 480px) and (max-width: 767px)  {
       background-image: url(/src/images/mob-offerings-480.png);
       @include retina {
@@ -78,6 +79,7 @@ line-height: $l-h;
 .offerings__container {
 
     @media  screen and (max-width: 479px) {
+      
       background-image: url(/src/images/mob-offerings-320.png);
       @include retina {
         background-image: url(/src/images/mob-offerings-640.png);
@@ -85,6 +87,8 @@ line-height: $l-h;
       background-size: 100%;
       background-repeat: no-repeat;
       background-size: cover;
+      padding-top: 40px;
+      padding-bottom: 60px;
     }
     @include desktop {
       display: flex;

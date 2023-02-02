@@ -39,22 +39,35 @@ line-height: $l-h;
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
-     //  1920 stretch
-      // @include desktop {
-      //   background-image: url(/src/images/des-offerings-1280.png);
-      //   @include retina {
-      //     background-image: url(/src/images/des-offerings-2560.png);
-      //   }
-      //   background-size: 100%;
-      //   background-repeat: no-repeat;
-      //   background-size: cover;
-      //   max-width: 1920px;
-      // }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media  screen and (min-width: 480px) and (max-width: 767px)  {
+      background-image: url(/src/images/mob-offerings-480.png);
+      @include retina {
+        background-image: url(/src/images/mob-offerings-960.png);
+      }
+    }
+     
+    @media  screen and (min-width: 768px) and (max-width: 1279px) {
+      background-image: url(/src/images/tab-offerings-768.png);
+      @include retina {
+        background-image: url(/src/images/tab-offerings-1536.png);
+      }
+    }
+      @include desktop {
+        background-image: url(/src/images/des-offerings-1280.png);
+        @include retina {
+          background-image: url(/src/images/des-offerings-2560.png);
+        }
+        max-width: 1920px;
+        margin: 0 auto;
+      }
       @media screen and (min-width: 768px) and (max-width: 1279px) {
         margin-top: -35px;
       }
   }
-
 
 .offerings__container {
     padding-top: 70px;
@@ -64,23 +77,13 @@ line-height: $l-h;
       @include retina {
         background-image: url(/src/images/mob-offerings-640.png);
       }
-    }
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @media  screen and (min-width: 480px) and (max-width: 767px)  {
-      background-image: url(/src/images/mob-offerings-480.png);
-      @include retina {
-        background-image: url(/src/images/mob-offerings-960.png);
-      }
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
     @media  screen and (min-width: 768px) and (max-width: 1279px) {
       padding-top: 187px;
       padding-bottom: 100px;
-      background-image: url(/src/images/tab-offerings-768.png);
-      @include retina {
-        background-image: url(/src/images/tab-offerings-1536.png);
-      }
     }
     @include desktop {
       padding-top: 230px;
@@ -88,16 +91,8 @@ line-height: $l-h;
       display: flex;
       flex-wrap: wrap;
       gap: 90px;
-      background-image: url(/src/images/des-offerings-1280.png);
-        @include retina {
-          background-image: url(/src/images/des-offerings-2560.png);
-        }
-      }
-    //   background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     }
-    // outline: 1px solid orangered;
+  }
 
   .offering__img-outer-wrap {
     position: relative;
